@@ -17,6 +17,10 @@ var MainInterface = React.createClass({
     }.bind(this));
   },
 
+  componentWillUnmount: function() {
+    this.serverRequest.abort();
+  },
+
   render: function() {
     var filteredApts = this.state.myAppointments;
     filteredApts = filteredApts.map(function(item, index) {
