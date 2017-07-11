@@ -9,6 +9,10 @@ var SearchAppointments = React.createClass({
     this.props.onReOrder(this.props.orderBy, e.target.id);
   },
 
+  handleSearch: function(e) {
+    this.props.onSearch(e.target.value);
+  },
+
   render: function() {
     return (
       <div className="row search-appointments">
