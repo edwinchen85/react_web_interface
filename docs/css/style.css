@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+ul {
+  padding-left: 0;
+}
+
 /**  Header Navigation **/
 
 header .navbar {
@@ -149,4 +153,8 @@ footer .navbar-nav>li a {
 
 .pet-info-media-body {
   padding-left: 50px;
+}
+
+.search-appointments {
+  margin-bottom: 2em;
 }
