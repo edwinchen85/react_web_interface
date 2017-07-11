@@ -4,7 +4,7 @@ var ReactDOM = require('react-dom');
 var MainInterface = React.createClass({
   getInitialState: function() {
     return {
-      data: [
+      myAppointments: [
         {
           "petName": "Buffy",
           "ownerName": "Hassum Harrod",
@@ -34,17 +34,17 @@ var MainInterface = React.createClass({
   },
 
   render: function() {
-    var filteredApts = this.state.data;
+    var filteredApts = this.state.myAppointments;
     filteredApts = filteredApts.map(function(item, index) {
       return (
         <li className="pet-item media" key={index}>
           <div className="pet-info-media-body">
             <div className="pet-head">
-              <span className="pet-name">{this.state.data[index].petName}</span>
-              <span className="apt-date pull-right">{this.state.data[index].aptDate}</span>
+              <span className="pet-name">{this.state.myAppointments[index].petName}</span>
+              <span className="apt-date pull-right">{this.state.myAppointments[index].aptDate}</span>
             </div>
-            <div className="owner-name"><span className="label-item">Owner:</span>{this.state.data[index].ownerName}</div>
-            <div className="apt-notes">{this.state.data[index].aptNotes}</div>
+            <div className="owner-name"><span className="label-item">Owner:</span>{this.state.myAppointments[index].ownerName}</div>
+            <div className="apt-notes">{this.state.myAppointments[index].aptNotes}</div>
           </div>
         </li>
       );
