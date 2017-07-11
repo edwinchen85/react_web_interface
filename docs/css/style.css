@@ -112,6 +112,7 @@ footer .navbar-nav>li a {
 .item-list .pet-item {
   border-bottom: 1px dotted gray;
   padding-bottom: 10px;
+  list-style: none;
 }
 
 .item-list .pet-item:last-child {
@@ -140,4 +141,12 @@ footer .navbar-nav>li a {
 
 .item-list .apt-date {
   font-style: italic;
+}
+
+.media-left {
+  float: left;
+}
+
+.pet-info-media-body {
+  padding-left: 50px;
 }
