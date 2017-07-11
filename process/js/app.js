@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var _ = require('lodash');
 var AptList = require('./AptList');
 var AddAppointment = require('./AddAppointment');
+var SearchAppointments = require('./SearchAppointments');
 
 var MainInterface = React.createClass({
   getInitialState: function() {
@@ -68,6 +69,7 @@ var MainInterface = React.createClass({
             handleToggle = {this.toggleAddDisplay}
             addApt = {this.addItem}
           />
+          <SearchAppointments />
           <ul className="pet-info media-body">
             {filteredApts}
           </ul>
