@@ -34,21 +34,27 @@ var MainInterface = React.createClass({
   },
 
   render: function() {
+    var filteredApts = this.state.data;
+    filteredApts = filteredApts.map(function(item, index) {
+      return (
+        <li className="pet-item media" key={index}>
+          <div className="pet-info-media-body">
+            <div className="pet-head">
+              <span className="pet-name">{this.state.data[index].petName}</span>
+              <span className="apt-date pull-right">{this.state.data[index].aptDate}</span>
+            </div>
+            <div className="owner-name"><span className="label-item">Owner:</span>{this.state.data[index].ownerName}</div>
+            <div className="apt-notes">{this.state.data[index].aptNotes}</div>
+          </div>
+        </li>
+      );
+    }.bind(this));
 
     return (
       <div className="interface">
         <div className="item-list media-list">
           <ul className="pet-info media-body">
-            <li className="pet-item media">
-              <div className="pet-info-media-body">
-                <div className="pet-head">
-                  <span className="pet-name">{this.state.data[0].petName}</span>
-                  <span className="apt-date pull-right">{this.state.data[0].aptDate}</span>
-                </div>
-                <div className="owner-name"><span className="label-item">Owner:</span>{this.state.data[0].ownerName}</div>
-                <div className="apt-notes">{this.state.data[0].aptNotes}</div>
-              </div>
-            </li>
+            {filteredApts}
           </ul>
         </div>
       </div>
