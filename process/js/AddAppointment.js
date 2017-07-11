@@ -1,6 +1,10 @@
 var React = require('react');
 
 var AddAppointment = React.createClass({
+  toggleAptDisplay: function() {
+    this.props.handleToggle();
+  },
+
   render: function() {
 
     var displayAptBody = {
@@ -9,7 +13,7 @@ var AddAppointment = React.createClass({
 
     return (
       <div className="panel panel-primary">
-        <div className="panel-heading apt-addheading">
+        <div className="panel-heading apt-addheading" onClick={this.toggleAptDisplay}>
           <span className="glyphicon glyphicon-plus"></span> Add Appointment
         </div>
         <div className="panel-body" style={displayAptBody}>

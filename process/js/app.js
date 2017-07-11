@@ -33,6 +33,13 @@ var MainInterface = React.createClass({
     });
   },
 
+  toggleAddDisplay: function() {
+    var tempVisibility = !this.state.aptBodyVisible;
+    this.setState({
+      aptBodyVisible: tempVisibility
+    });
+  },
+
   render: function() {
     var filteredApts = this.state.myAppointments;
     filteredApts = filteredApts.map(function(item, index) {
@@ -50,6 +57,7 @@ var MainInterface = React.createClass({
         <div className="item-list media-list">
           <AddAppointment
             bodyVisible = {this.state.aptBodyVisible}
+            handleToggle = {this.toggleAddDisplay}
           />
           <ul className="pet-info media-body">
             {filteredApts}
