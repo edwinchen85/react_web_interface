@@ -56,6 +56,10 @@ var MainInterface = React.createClass({
     var orderBy = this.state.orderBy;
     var orderDir = this.state.orderDir;
 
+    filteredApts = _.orderBy(filteredApts, function(item) {
+      return item[orderBy].toLowerCase();
+    }, orderDir);
+
     filteredApts = filteredApts.map(function(item, index) {
       return (
         <AptList
