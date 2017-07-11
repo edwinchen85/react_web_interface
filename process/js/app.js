@@ -8,6 +8,15 @@ var MainInterface = React.createClass({
     }
   },
 
+  componentDidMount: function() {
+    this.serverRequest = $.get('./js/data.json', function(result) {
+      var tempApts = result;
+      this.setState({
+        myAppointments: tempApts
+      });
+    }.bind(this));
+  },
+
   render: function() {
     var filteredApts = this.state.myAppointments;
     filteredApts = filteredApts.map(function(item, index) {
