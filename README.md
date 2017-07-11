@@ -11,3 +11,5 @@ Topics include:
 - Sorting and updating views, events, and search results
 
 [Visit demo site here.](http://edwinchen.co/react_web_interface/)
+
+![Preview](screenshot.jpg)
