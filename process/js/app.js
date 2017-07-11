@@ -78,7 +78,10 @@ var MainInterface = React.createClass({
             handleToggle = {this.toggleAddDisplay}
             addApt = {this.addItem}
           />
-          <SearchAppointments />
+          <SearchAppointments
+            orderBy = {this.state.orderBy}
+            orderDir = {this.state.orderDir}
+          />
           <ul className="pet-info media-body">
             {filteredApts}
           </ul>
