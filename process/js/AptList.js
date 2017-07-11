@@ -1,6 +1,10 @@
 var React = require('react');
 
 var AptList = React.createClass({
+  handleDelete: function() {
+    this.props.onDelete(this.props.whichItem);
+  },
+
   render: function() {
     return (
       <li className="pet-item media">
