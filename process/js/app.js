@@ -37,7 +37,20 @@ var MainInterface = React.createClass({
 
     return (
       <div className="interface">
-
+        <div className="item-list media-list">
+          <ul className="pet-info media-body">
+            <li className="pet-item media">
+              <div className="pet-info-media-body">
+                <div className="pet-head">
+                  <span className="pet-name">{this.state.data[0].petName}</span>
+                  <span className="apt-date pull-right">{this.state.data[0].aptDate}</span>
+                </div>
+                <div className="owner-name"><span className="label-item">Owner:</span>{this.state.data[0].ownerName}</div>
+                <div className="apt-notes">{this.state.data[0].aptNotes}</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     )
   }
