@@ -1,6 +1,14 @@
 var React = require('react');
 
 var SearchAppointments = React.createClass({
+  handleSort: function(e) {
+    this.props.onReOrder(e.target.id, this.props.orderDir);
+  },
+
+  handleOrder: function(e) {
+    this.props.onReOrder(this.props.orderBy, e.target.id);
+  },
+
   render: function() {
     return (
       <div className="row search-appointments">
