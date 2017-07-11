@@ -7,6 +7,7 @@ var AddAppointment = require('./AddAppointment');
 var MainInterface = React.createClass({
   getInitialState: function() {
     return {
+      aptBodyVisible: false,
       myAppointments: []
     }
   },
@@ -47,7 +48,9 @@ var MainInterface = React.createClass({
     return (
       <div className="interface">
         <div className="item-list media-list">
-          <AddAppointment />
+          <AddAppointment
+            bodyVisible = {this.state.aptBodyVisible}
+          />
           <ul className="pet-info media-body">
             {filteredApts}
           </ul>
